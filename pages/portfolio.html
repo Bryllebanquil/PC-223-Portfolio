@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio · Brylle's Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/dashboard.css">
+    <link rel="stylesheet" href="../style/portfolio.css">
+</head>
+<body data-theme="dark">
+    <header>
+        <div class="header-brand" onclick="toggleNav('header')" role="button" tabindex="0" aria-label="Open menu" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleNav('header'); }">
+            <img src="../source/images/logo/image.jpg" alt="Brylle's Team" class="header-logo">
+            <span class="header-nav-label">AVIGATION</span>
+        </div>
+        <a href="portfolio.html" class="headsec"><h2>PORTFOLIO</h2></a>
+        <a href="favorites.html" class="headsec"><h2>FAVORITES</h2></a>
+        <h2 id="close">CLOSE</h2>
+        <nav class="navigation">
+            <!-- From Uiverse.io by Galahhad - BB8 Toggle -->
+            <label class="bb8-toggle" id="themeToggle">
+                <input class="bb8-toggle__checkbox" type="checkbox">
+                <div class="bb8-toggle__container">
+                    <div class="bb8-toggle__scenery">
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="tatto-1"></div>
+                        <div class="tatto-2"></div>
+                        <div class="gomrassen"></div>
+                        <div class="hermes"></div>
+                        <div class="chenini"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                    </div>
+                    <div class="bb8">
+                        <div class="bb8__head-container">
+                            <div class="bb8__antenna"></div>
+                            <div class="bb8__antenna"></div>
+                            <div class="bb8__head"></div>
+                        </div>
+                        <div class="bb8__body"></div>
+                    </div>
+                    <div class="artificial__hidden">
+                        <div class="bb8__shadow"></div>
+                    </div>
+                </div>
+            </label>
+        </nav>
+    </header>
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header" onclick="toggleNav('sidebar')" role="button" tabindex="0" aria-label="Close menu" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleNav('sidebar'); }">
+            <img src="../source/images/logo/image.jpg" alt="Brylle's Team" class="sidebar-logo">
+            <h2 class="sidebar-title">AVIGATION</h2>
+        </div>
+        <ul>
+            <a href="dashboard.html"><li>HOME</li></a>
+            <a href="portfolio.html"><li>PORTFOLIO</li></a>
+            <a href="favorites.html"><li>FAVORITES</li></a>
+            <a href="javascript:void(0)" onclick="toggleNav('sidebar'); return false;"><li>CLOSE</li></a>
+        </ul>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleNav('overlay')" aria-hidden="true"></div>
+
+    <h1 class="title" id="mainTitle" data-typing="Portfolio"></h1>
+    <div class="main main--portfolio">
+        <div class="portfolio-container">
+            <p class="portfolio-intro">Choose a tool to run. Integrative Programming Activities.</p>
+            
+            <div class="programs-container">
+                <div class="programs-grid">
+                    <button type="button" class="program-btn" onclick="component1()">Temperature Converter</button>
+                    <button type="button" class="program-btn" onclick="component2()">Word Length Checker</button>
+                    <button type="button" class="program-btn" onclick="component3()">Birthstone Finder</button>
+                    <button type="button" class="program-btn" onclick="component4()">Basic Calculator</button>
+                    <button type="button" class="program-btn" onclick="component5()">Acceleration Calculator</button>
+                </div>
+            </div>
+
+            <div id="portfolioContent" class="portfolio-content"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Brylle's Team &copy; 2026</p>
+    </footer>
+    <script src="../function/data.js"></script>
+    <script src="../function/script.js"></script>
+</body>
+</html>

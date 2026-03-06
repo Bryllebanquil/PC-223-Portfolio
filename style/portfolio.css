@@ -1,0 +1,79 @@
+/* Portfolio page – main area (load after dashboard.css for theme vars) */
+
+.main--portfolio {
+    padding: 24px 20px 48px;
+    align-items: flex-start;
+}
+
+.portfolio-container {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.portfolio-intro {
+    display: flex;
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+    justify-content: center;
+}
+
+.programs-container {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--card-shadow);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programs-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0;
+}
+
+.program-btn {
+    background: var(--bg-header);
+    color: var(--text-header);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 14px 22px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.program-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--accent-glow);
+    border-color: var(--accent-soft);
+    background: linear-gradient(135deg, var(--bg-header) 0%, rgba(168, 85, 247, 0.15) 100%);
+}
+
+body[data-theme="light"] .program-btn:hover {
+    background: linear-gradient(135deg, var(--bg-header) 0%, rgba(124, 58, 237, 0.12) 100%);
+}
+
+.program-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 600px) {
+    .programs-grid {
+        flex-direction: column;
+    }
+    .program-btn {
+        width: 100%;
+    }
+}

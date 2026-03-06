@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites · Brylle's Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/dashboard.css">
+    <link rel="stylesheet" href="../style/favorites.css">
+</head>
+<body data-theme="dark">
+    <header>
+        <div class="header-brand" onclick="toggleNav('header')" role="button" tabindex="0" aria-label="Open menu" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleNav('header'); }">
+            <img src="../source/images/logo/image.jpg" alt="Brylle's Team" class="header-logo">
+            <span class="header-nav-label">AVIGATION</span>
+        </div>
+        <a href="portfolio.html" class="headsec"><h2>PORTFOLIO</h2></a>
+        <a href="favorites.html" class="headsec"><h2>FAVORITES</h2></a>
+        <h2 id="close">CLOSE</h2>
+        <nav class="navigation">
+            <!-- From Uiverse.io by Galahhad - BB8 Toggle -->
+            <label class="bb8-toggle" id="themeToggle">
+                <input class="bb8-toggle__checkbox" type="checkbox">
+                <div class="bb8-toggle__container">
+                    <div class="bb8-toggle__scenery">
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="tatto-1"></div>
+                        <div class="tatto-2"></div>
+                        <div class="gomrassen"></div>
+                        <div class="hermes"></div>
+                        <div class="chenini"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                    </div>
+                    <div class="bb8">
+                        <div class="bb8__head-container">
+                            <div class="bb8__antenna"></div>
+                            <div class="bb8__antenna"></div>
+                            <div class="bb8__head"></div>
+                        </div>
+                        <div class="bb8__body"></div>
+                    </div>
+                    <div class="artificial__hidden">
+                        <div class="bb8__shadow"></div>
+                    </div>
+                </div>
+            </label>
+        </nav>
+    </header>
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header" onclick="toggleNav('sidebar')" role="button" tabindex="0" aria-label="Close menu" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleNav('sidebar'); }">
+            <img src="../source/images/logo/image.jpg" alt="Brylle's Team" class="sidebar-logo">
+            <h2 class="sidebar-title">AVIGATION</h2>
+        </div>
+        <ul>
+            <a href="dashboard.html"><li>HOME</li></a>
+            <a href="portfolio.html"><li>PORTFOLIO</li></a>
+            <a href="favorites.html"><li>FAVORITES</li></a>
+            <a href="javascript:void(0)" onclick="toggleNav('sidebar'); return false;"><li>CLOSE</li></a>
+        </ul>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleNav('overlay')" aria-hidden="true"></div>
+
+    <h1 class="title" id="mainTitle" data-typing="Favorites"></h1>
+    <div class="main main--favorites">
+        <div class="show-cards">
+            <h2>Choose Your Favorite Movies</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="/source/images/logo/inception.jpg" alt="Inception">
+                    <h3>Inception</h3>
+                    <button class="heart-btn" data-movie="inception"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                </div>
+                <div class="card">
+                    <img src="/source/images/logo/tdk.jpg" alt="The Dark Knight">
+                    <h3>The Dark Knight</h3>
+                    <button class="heart-btn" data-movie="dark-knight"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                </div>
+                <div class="card">
+                    <img src="/source/images/logo/interstellar.jpg" alt="Interstellar">
+                    <h3>Interstellar</h3>
+                    <button class="heart-btn" data-movie="interstellar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                </div>
+                <div class="card">
+                    <img src="/source/images/logo/pf.jpg" alt="Pulp Fiction">
+                    <h3>Pulp Fiction</h3>
+                    <button class="heart-btn" data-movie="pulp-fiction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                </div>
+                <div class="card">
+                    <img src="/source/images/logo/tm.jpg" alt="The Matrix">
+                    <h3>The Matrix</h3>
+                    <button class="heart-btn" data-movie="matrix"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                </div>
+                <div class="card">
+                    <img src="/source/images/logo/aeg.jpg" alt="Avengers: Endgame">
+                    <h3>Avengers: Endgame</h3>
+                    <button class="heart-btn" data-movie="avengers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                </div>
+                <div class="card">
+                    <img src="/source/images/logo/atwow.jpg" alt="Parasite">
+                    <h3>Avatar The Way of Water</h3>
+                    <button class="heart-btn" data-movie="parasite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                </div>
+                <div class="card">
+                    <img src="/source/images/logo/trip.jpg" alt="The RIP">
+                    <h3>The RIP</h3>
+                    <button class="heart-btn" data-movie="THE RIP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                </div>
+            </div>
+        </div>
+        <div class="comments">
+            <div class="comment-message">
+                <h2>Comments</h2>
+                <p>Share your thoughts on your favorite movies!</p>
+            </div>
+            <div class="comment-container">
+                <select name="movies" id="movie-dropdown">
+                    <option value="Inception">Inception</option>
+                    <option value="The Dark Knight">The Dark Knight</option>
+                    <option value="Interstellar">Interstellar</option>
+                    <option value="Pulp Fiction">Pulp Fiction</option>
+                    <option value="The Matrix">The Matrix</option>
+                    <option value="Avengers: Endgame">Avengers: Endgame</option>
+                    <option value="Avatar The Way of Water">Avatar The Way of Water</option>
+                    <option value="The RIP">The RIP</option>
+                </select>
+                <textarea id="comment-input" placeholder="Write your comment here..."></textarea>
+                <button type="button" id="submit-comment">Submit</button>
+            </div>
+            <div class="comment-list" id="comment-list"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Brylle's Team &copy; 2026</p>
+    </footer>
+    <script src="../function/data.js"></script>
+    <script src="../function/favorites.js"></script>
+</body>
+</html>

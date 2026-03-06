@@ -1,0 +1,384 @@
+/* Favorites page – main area (load after dashboard.css for theme vars) */
+
+.main--favorites {
+    padding: 24px 20px 48px;
+    align-items: flex-start;
+}
+
+
+
+.favorites-placeholder {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    padding: 48px 24px;
+    text-align: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    border: 1px dashed var(--card-border);
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.favorites-placeholder:hover {
+    border-color: var(--accent-soft);
+}
+
+
+.show-cards {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.show-cards h2 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 12px;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.heart-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme="dark"] .heart-btn {
+    background: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+}
+
+body[data-theme="dark"] .heart-btn:hover {
+    background: rgba(117, 115, 115, 0.8);
+}
+
+body[data-theme="dark"] .heart-btn.favorited {
+    color: red;
+}
+
+body[data-theme="dark"] .heart-btn.favorited svg {
+    fill: red;
+    stroke: red;
+}
+
+body[data-theme="light"] .heart-btn {
+    background: rgba(239, 239, 239, 0.5);
+    color: black;
+}
+
+body[data-theme="light"] .heart-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+body[data-theme="light"] .heart-btn.favorited {
+    color: red;
+}
+
+body[data-theme="light"] .heart-btn.favorited svg {
+    fill: red;
+    stroke: red;
+}
+
+.heart-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+}
+body[data-theme="dark"] h2{
+    color: white;
+}
+body[data-theme="dark"] .card h3 {
+    color: white;
+}
+
+body[data-theme="light"] p{
+    color: black;
+}
+body[data-theme="dark"] p{
+    color: white;
+}
+.favorites-placeholder p{
+    color: var(--text-muted);
+    justify-content: center;
+}
+
+/* Comments */
+.comments {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.comment-message {
+    text-align: left;
+}
+
+.comments h2, .comments p {
+    margin: 0;
+}
+
+.comments-container,
+.comment-container {
+    filter: blur(0.2px);
+    -webkit-filter: blur(0.2px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 16px;
+    padding: 20px 24px;
+    width: fit-content;
+    min-width: 600px;
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    color: var(--text-muted);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+body[data-theme="dark"] .comment-container {
+    background: rgba(12, 10, 20, 0.6);
+}
+
+body[data-theme="light"] .comment-container {
+    background: var(--card-bg);
+}
+
+.comments h2 {
+    color: var(--text-title);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.comment-message p {
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* textarea */
+.comments textarea {
+    height: 100px;
+    flex: 1;
+    min-width: 400px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    font-size: 1rem;
+    font-family: inherit;
+    resize: none;
+    background: transparent;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    outline: none;
+}
+
+body[data-theme="dark"] .comments textarea {
+    color: var(--text-title);
+}
+
+body[data-theme="dark"] .comments textarea::placeholder {
+    color: var(--text-muted);
+}
+
+body[data-theme="light"] .comments textarea {
+    color: var(--text-title);
+}
+
+body[data-theme="light"] .comments textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.comments textarea:focus {
+    border-color: var(--accent);
+}
+
+/* select + button shared */
+.comments button, .comments select {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+    background: transparent;
+    border: 1px solid var(--card-border);
+}
+
+body[data-theme="dark"] .comments button,
+body[data-theme="dark"] .comments select {
+    color: var(--text-title);
+}
+
+body[data-theme="light"] .comments button,
+body[data-theme="light"] .comments select {
+    color: var(--text-title);
+}
+
+.comments select {
+    text-align: center;
+    min-width: 200px;
+}
+
+.comments select option {
+    background: var(--bg-body);
+    color: var(--text-title);
+}
+
+.comments button:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+}
+
+.comments select:focus,
+.comments select:hover {
+    border-color: var(--accent);
+    outline: none;
+}
+option{
+    display: flex;
+    justify-content: center;
+}
+body[data-theme="dark"] footer p{
+    color: white;
+}
+body[data-theme="light"] footer p{
+    color: var(--bg-body);
+}
+
+/* ── Comment list (submitted comments) ── */
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    min-width: 600px;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.comment-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    background: transparent;
+    box-shadow: var(--card-shadow);
+    animation: comment-in 0.25s ease;
+    transition: border-color 0.3s ease;
+}
+
+.comment-item:hover {
+    border-color: var(--accent);
+}
+
+@keyframes comment-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes comment-out {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-6px); }
+}
+
+.comment-removing {
+    animation: comment-out 0.2s ease forwards;
+}
+
+.comment-movie {
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid var(--accent-glow);
+    flex-shrink: 0;
+}
+
+.comment-text {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-card);
+    word-break: break-word;
+}
+
+.comment-delete {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.comment-delete:hover {
+    color: red;
+    background: rgba(255, 0, 0, 0.08);
+}

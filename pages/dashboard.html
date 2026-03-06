@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDTERM PROJECT IN PC223</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/dashboard.css">
+</head>
+<body data-theme="dark">
+    <header>
+        <div class="header-brand" onclick="toggleNav('header')" role="button" tabindex="0" aria-label="Open menu" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleNav('header'); }">
+            <img src="../source/images/logo/image.jpg" alt="Brylle's Team" class="header-logo">
+            <span class="header-nav-label">AVIGATION</span>
+        </div>
+        <a href="portfolio.html" class="headsec"><h2>PORTFOLIO</h2></a>
+        <a href="favorites.html" class="headsec"><h2>FAVORITES</h2></a>
+        <h2 id="close">CLOSE</h2>
+        <nav class="navigation">
+            <!-- From Uiverse.io by Galahhad - BB8 Toggle -->
+            <label class="bb8-toggle" id="themeToggle">
+                <input class="bb8-toggle__checkbox" type="checkbox">
+                <div class="bb8-toggle__container">
+                    <div class="bb8-toggle__scenery">
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="tatto-1"></div>
+                        <div class="tatto-2"></div>
+                        <div class="gomrassen"></div>
+                        <div class="hermes"></div>
+                        <div class="chenini"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                    </div>
+                    <div class="bb8">
+                        <div class="bb8__head-container">
+                            <div class="bb8__antenna"></div>
+                            <div class="bb8__antenna"></div>
+                            <div class="bb8__head"></div>
+                        </div>
+                        <div class="bb8__body"></div>
+                    </div>
+                    <div class="artificial__hidden">
+                        <div class="bb8__shadow"></div>
+                    </div>
+                </div>
+            </label>
+        </nav>
+    </header>
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header" onclick="toggleNav('sidebar')" role="button" tabindex="0" aria-label="Close menu" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleNav('sidebar'); }">
+            <img src="../source/images/logo/image.jpg" alt="Brylle's Team" class="sidebar-logo">
+            <h2 class="sidebar-title">AVIGATION</h2>
+        </div>
+        <ul>
+            <a href="dashboard.html"><li>HOME</li></a>
+            <a href="portfolio.html"><li>PORTFOLIO</li></a>
+            <a href="favorites.html"><li>FAVORITES</li></a>
+            <a href="javascript:void(0)" onclick="toggleNav('sidebar'); return false;"><li>CLOSE</li></a>
+            <!--<a href="settings.html"><li>Settings</li></a>
+            <a href="help.html"><li>Help</li></a>
+            <a href="login.html"><li>Logout</li></a>-->
+        </ul>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleNav('overlay')" aria-hidden="true"></div>
+
+    <section class="hero">
+        <h1 class="hero-title" id="mainTitle" data-typing="Brylle's Team"></h1>
+        <p class="hero-subtitle">MIDTERM PROJECT IN PC223</p>
+        <p class="hero-roles" id="heroRoles" aria-live="polite"></p>
+    </section>
+
+    <div class="main">
+        <h2 class="section-heading">Meet the Team</h2>
+        <section class="cards-section">
+            <article class="card-block" data-scroll>
+                <div class="card">
+                    <img src="../source/images/logo/brylle.png" alt="Brylle">
+                </div>
+                <div class="card-info">
+                    <h2>BRYLLE BANQUIL</h2>
+                    <p>BSIT 2B PSEUDOCODE</p>
+                    <p>bryllebanquil@gmail.com</p>
+                </div>
+            </article>
+            <article class="card-block card-block--reversed" data-scroll>
+                <div class="card">
+                    <img src="../source/images/logo/rob.jpg" alt="Rob">
+                </div>
+                <div class="card-info">
+                    <h2>ROB DUSTINE GALEOS</h2>
+                    <p>BSIT 2B PSEUDOCODE</p>
+                    <P>robrob6969@gmail.com</P>
+                </div>
+            </article>
+            <article class="card-block" data-scroll>
+                <div class="card">
+                    <img src="../source/images/logo/ivan.jpg" alt="Ivan">
+                </div>
+                <div class="card-info">
+                    <h2>IVAN LINGO</h2>
+                    <p>BSIT 2B PSEUDOCODE</p>
+                    <P>ivnlngoo09@gmail.com</P>
+                </div>
+            </article>
+        </section>
+    </div>
+    
+
+    <footer>
+        <p>MIDTERM PROJECT IN PC223 &copy; 2026</p>
+    </footer>
+    
+</body>
+<script src="../function/data.js"></script>
+</html>
