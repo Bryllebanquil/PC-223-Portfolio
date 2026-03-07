@@ -76,3 +76,24 @@ document.addEventListener('DOMContentLoaded', function () {
         list.appendChild(item);
     }
 });
+function toggleHeart(element) {
+    element.classList.toggle("active");
+    element.textContent = element.classList.contains("active") ? "♥" : "♡";
+}
+
+function addComment(button) {
+    const card = button.closest(".card");
+    const commentInput = card.querySelector(".comment");
+    const display = card.querySelector(".display-comment");
+
+    if (commentInput.value.trim() === "") {
+        alert("Please write a comment.");
+        return;
+    }
+
+    const p = document.createElement("p");
+    p.textContent = commentInput.value;
+    display.prepend(p);
+
+    commentInput.value = "";
+}
